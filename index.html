@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <title>Hello, world!</title>
+    </head>
+    <body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Let's have fun!! with JQuery</h1>
+                <button id="btn1">#btn1</button>
+                <button id="btn2">#btn2</button>
+                <button id="btn3">#btn3</button>
+                <button id="btn4">#btn4</button>
+        </div> 
+        <div class="row">
+            <h1>JQuery Effects</h1>
+            <div class="col-xs-3">
+                <div id="card1" class="card">
+                    <div class="card-header bg-primary">
+                        #panel1
+                    </div> 
+                    <div class="card-body">content
+                    </div>  
+                </div>  
+            </div> 
+            <div class="col-xs-3">
+                <div id="card2" class="card">
+                    <div class="card-header bg-primary">
+                        #panel2
+                    </div>
+                    <div class="card-body">content
+                    </div>  
+                </div>
+            </div>    
+            <div class="col-xs-3">
+                <div id="card3" class="card">
+                    <div class="card-header bg-primary">
+                        #panel3
+                    </div>
+                    <div class="card-body">content
+                    </div>
+                </div> 
+            </div>    
+            <div class="col-xs-3">
+                <div id="card4" class="card">
+                    <div class="card-header bg-primary">
+                        #panel4
+                    </div>
+                    <div class="card-body">content
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+    
+        $(document).ready(function(){
+            //hide(),show(),fadeIn(),fadeOut(),toggle(),slideUp(),slideDown(),fadeToggle(),slideToggle()
+            $("#card1").hide(300).show(300);
+            $("#card2").slideUp(200).slideDown(200);
+            $("#card3").toggle(300).toggle(300);
+            $("#card4").fadeToggle(300).delay(1000).fadeToggle(300);
+            $("#card4").css({color:'red',fontWeight:'bold',opacity:'2'});
+
+        });
+    </script>
+  
+    
+  </body>
+</html>
