@@ -16,10 +16,10 @@
     <div class="container">
         <div class="jumbotron">
             <h1>Let's have fun!! with JQuery</h1>
-                <button id="btn1">#btn1</button>
-                <button id="btn2">#btn2</button>
-                <button id="btn3">#btn3</button>
-                <button id="btn4">#btn4</button>
+                <button class="card-button" data-cardId="card1" >#btn1</button>
+                <button class="card-button" data-cardId="card2" >#btn2</button>
+                <button class="card-button" data-cardId="card3" >#btn3</button>
+                <button class="card-button" data-cardId="card4" >#btn4</button>
         </div> 
         <div class="row">
             <h1>JQuery Effects</h1>
@@ -71,9 +71,33 @@
             $("#card2").slideUp(200).slideDown(200);
             $("#card3").toggle(300).toggle(300);
             $("#card4").fadeToggle(300).delay(1000).fadeToggle(300);
-            $("#card4").css({color:'red',fontWeight:'bold',opacity:'2'});
-
+            $("#card4").css({color:'red',fontWeight:'bold',opacity:'20'});
         });
+            //jquery function practice
+           $("#btn1").html("my button");
+            $("#btn2").on("click",function(){
+              $("#card3 .card-body").html("hello");
+            });
+            $("#btn1").click(function(){
+                $("#card1 .card-body").html("<b>button one clicked</b>");
+            })
+            $("#btn2").click(function(){
+                $("#card2 .card-body").html("button two clicked");
+            })
+            $("#btn3").click(function(){
+                $("#card3 .card-body").html("button three clicked");
+            })
+            $("#btn4").click(function(){
+                $("#card4 .card-body").html("button four clicked");
+            })
+            $('.card-button').on('click',function(){
+                var content="content changed";
+                var cardId=$(this).attr("data-cardId");
+               // alert(cardId);
+               // $('#'+cardId).toggle();
+                $('#'+cardId+' .card-body').html(content);
+            })
+
     </script>
   
     
